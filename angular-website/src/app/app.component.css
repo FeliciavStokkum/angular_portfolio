@@ -1,0 +1,439 @@
+/* Algemene instellingen voor de body */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #FFFDFE  ;
+}
+
+/* Hover-effect voor de paragrafen en secties */
+#about,
+#contact,
+#skills,
+#interests,
+#hobby-photos,
+#projects:hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#about:hover,
+#contact:hover,
+#skills:hover,
+#interests:hover,
+#hobby-photos:hover,
+#projects:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraaf styling */
+.about {
+    width: 100%;
+    padding: 40px;
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    /* Dit zorgt ervoor dat de paragraaf ook meeschaling heeft met de secties */
+}
+
+/* Algemene instellingen voor de container */
+app-root {
+    flex: 1;
+}
+
+#contact {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.contact-item i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 50px;
+    /* Consistente grootte voor alle iconen */
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.contact-item i.fa-github {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    padding: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.contact-item span {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.contact-item a:hover i {
+    color: #005582;
+}
+
+.contact-item a:hover span {
+    color: #007bff;
+}
+
+.contact-item a:hover {
+    color: #005582;
+    transform: scale(1.1);
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+/* Maak de navbar sticky */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #f6e2da ;
+    color: #4D4D4D;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    z-index: 1000;
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #4D4D4D;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main styling */
+main {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Flexbox container voor de paragraph en secties */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    align-items: stretch;
+    /* Dit zorgt ervoor dat de secties de hoogte van de grootste sectie krijgen */
+}
+
+/* Sectie styling (voor Skills en Interests) */
+#skills,
+#interests,
+#hobby-photos,
+#projects,
+#about,
+#contact {
+    width: 100%;
+    padding: 30px;
+    background-color: #FDF1EB  ;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 70px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    /* Dit zorgt ervoor dat de paragraaf ook meeschaling heeft met de secties */
+    text-align: left;
+    color: #4D4D4D ;
+    font-size: 17px;
+    margin-top: 20px;
+    scroll-margin-top: 200px;
+}
+
+#interests ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Ruimte tussen de items */
+}
+
+#interests li {
+    display: flex;
+    align-items: center;
+    /* Zorgt ervoor dat de tekst en het icoon goed uitgelijnd zijn */
+    font-size: 1.2rem;
+    /* Verhoog de font-grootte indien gewenst */
+}
+
+#interests li i {
+    margin-left: 10px;
+    /* Zorgt ervoor dat het icoon achter de tekst komt te staan */
+    font-size: 1.5rem;
+    /* Verhoog de grootte van het icoon indien gewenst */
+}
+
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li {
+    display: flex;
+    flex-direction: column;
+    /* Dit zorgt dat de sterren onder elkaar komen */
+}
+
+.stars {
+    margin-left: 120px;
+    margin-top: -20px;
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #c4b3a9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #c0ad9a;
+}
+
+/* Footer styling */
+footer {
+    background-color: #f6e2da;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin-top: 100px;
+}
+
+/* Active link styling */
+a.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Hobby en projects secties */
+#hobby-photos img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Algemene sectie marge */
+section {
+    margin-bottom: 40px;
+}
+
+/* Container voor de project gallery */
+.project-gallery {
+    display: flex;
+    justify-content: left;
+    /* Zorgt ervoor dat de projecten gecentreerd worden */
+    gap: 20px;
+    /* Ruimte tussen de items */
+}
+
+/* Stijl voor elk project item */
+.project-item {
+    padding: 40px;
+    /* Voeg wat padding toe rondom de afbeelding */
+    text-align: left;
+    /* Centreert de tekst */
+    transition: transform 0.3s ease-in-out;
+    /* Maak de overgang vloeiender bij hover */
+    margin-left: -40px;
+}
+
+/* Maak de afbeelding responsief en kleiner */
+.project-item img {
+    height: 350px;
+    object-fit: cover;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    image-rendering: crisp-edges;
+    /* Zorgt voor een scherpere weergave */
+}
+
+#interests {
+    text-align: left;
+    /* Zorgt ervoor dat de tekst aan de linkerkant staat */
+}
+
+#interests img {
+    width: 282.5px;
+    /* Zorg ervoor dat de afbeeldingen dezelfde breedte hebben */
+    height: 200px;
+    /* Zorg ervoor dat de afbeeldingen dezelfde hoogte hebben */
+    object-fit: cover;
+    /* Zorgt ervoor dat de afbeelding goed past zonder uitgerekt te worden */
+    margin: 10px;
+    /* Voeg wat ruimte tussen de afbeeldingen toe */
+    display: inline-block;
+    /* Zorg ervoor dat de afbeeldingen naast elkaar staan */
+    filter: grayscale(70%);
+    /* Zet de afbeeldingen in grijstinten */
+}
+
+
+#interests ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#interests li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#interests i {
+    margin-left: 10px;
+    /* Voeg ruimte toe tussen de tekst en het icoon */
+}
+
+#interests img:first-of-type {
+    margin-left: 0;
+    /* Verwijder de marge van de eerste afbeelding als je wilt dat de eerste afbeelding helemaal links uitlijnt */
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 30px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat de titel en progress bar onder elkaar staan */
+    align-items: flex-start; /* Houdt alles netjes uitgelijnd aan de linkerkant */
+}
+
+#skills li div.progress {
+    margin-top: 10px; /* Voeg ruimte toe tussen de titel en de balk */
+}
+
+
+.progress {
+    width: 60%;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #636663;
+    border-radius: 5px;
+}
+
+
+/* Responsieve styling voor kleinere schermen */
+@media screen and (max-width: 1024px) {
+    section {
+        padding-top: 60px;
+        /* Pas de ruimte aan op kleinere schermen */
+    }
+
+    #skills,
+    #projects,
+    #hobby-photos,
+    #interests,
+    #about {
+        scroll-margin-top: 60px;
+        /* Ook voor ankerlinken op kleinere schermen */
+    }
+}
+
+/* Specifieke styling voor schermgroottes tussen 1024px en 1280px */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .main-content {
+        flex-direction: row;
+    }
+
+    #hobby-photos {
+        align-items: left;
+    }
+}
